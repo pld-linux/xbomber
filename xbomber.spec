@@ -43,7 +43,7 @@ done
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/Games/Strategy,{_pixmapsdir},%{_datadir}/%name}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/Games/Strategy,%{_pixmapsdir},%{_datadir}/%{name}}
 
 install xbomber $RPM_BUILD_ROOT%{_bindir}
 cp -aR bitmaps pixmaps jungle levels sounds $RPM_BUILD_ROOT%{_datadir}/%{name}
