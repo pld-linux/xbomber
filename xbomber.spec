@@ -5,6 +5,7 @@ Summary:	A multi-player maze-style game
 Group:		Applications/Games
 License:	GPL
 Source0:	ftp://ftp.sonic.net/pub/users/nbs/unix/x/xbomber/%name.%version.tar.gz
+Source1:	xbomber.desktop
 URL:		http://www.newbreedsoftware.com/xbomber/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:	ImageMagick
@@ -29,26 +30,20 @@ done
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir} $RPM_BUILD_ROOT%{_applnkdir}/Games/TacticStrategy $RPM_BUILD_ROOT%{_datadir}/pixmaps $RPM_BUILD_ROOT%{_datadir}/%name
-install -m 755 xbomber $RPM_BUILD_ROOT%{_bindir}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/Games/Strategy,{_pixmapsdir},%{_datadir}/%name}
+
+install xbomber $RPM_BUILD_ROOT%{_bindir}
 cp -aR bitmaps pixmaps jungle levels sounds $RPM_BUILD_ROOT%{_datadir}/%{name}
-convert bitmaps/bomb.xbm $RPM_BUILD_ROOT%{_datadir}/pixmaps/xbomber.png
-cat >$RPM_BUILD_ROOT%{_applnkdir}/Games/TacticStrategy/xbomber.desktop <<EOF
-[Desktop Entry]
-Name=XBomber
-GenericName=Multi-player strategy game
-Exec=xbomber
-Icon=xbomber
-Type=Application
-Terminal=0
-EOF
+convert bitmaps/bomb.xbm $RPM_BUILD_ROOT%{_pixmapsdir}/xbomber.png
+
+install SOURCE1 $RPM_BUILD_ROOT%{_applnkdir}/Games/Strategy
 
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
-%{_datadir}/pixmaps/*
-%{_applnkdir}/Games/*/*
+%{_pixmapsdir}/*
+%{_applnkdir}/Games/Strategy/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT $RPM_BUILD_DIR/%{name}-%{version}
