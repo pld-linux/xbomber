@@ -6,6 +6,7 @@ Release:	3
 Group:		Applications/Games
 License:	GPL
 Source0:	ftp://ftp.sonic.net/pub/users/nbs/unix/x/xbomber/%{name}.%{version}.tar.gz
+# Source0-md5:	c17b5dda0241d29ea4644b2906985716
 Source1:	xbomber.desktop
 URL:		http://www.newbreedsoftware.com/xbomber/
 BuildRequires:	ImageMagick
