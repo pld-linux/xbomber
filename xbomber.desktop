@@ -8,3 +8,4 @@ Icon=xbomber.png
 Exec=xbomber
 Terminal=false
 Type=Application
+# vi: encoding=utf-8
