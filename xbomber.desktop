@@ -5,5 +5,5 @@ Comment=Multi-player strategy game
 Comment[pl]=Gra strategiczna dla kilku graczy
 Icon=xbomber.png
 Exec=xbomber
-Terminal=0
+Terminal=false
 Type=Application
