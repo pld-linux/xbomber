@@ -3,7 +3,7 @@ Summary(pl):	Gra labiryntowa dla wielu graczy
 Name:		xbomber
 Version:	0.8
 Release:	3
-Group:		Applications/Games
+Group:		X11/Applications/Games
 License:	GPL
 Source0:	ftp://ftp.sonic.net/pub/users/nbs/unix/x/xbomber/%{name}.%{version}.tar.gz
 # Source0-md5:	c17b5dda0241d29ea4644b2906985716
