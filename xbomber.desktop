@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=XBomber
+GenericName=Multi-player strategy game
+Comment=Multi-player strategy game
+Comment[pl]=Gra strategiczna dla kilku graczy
+Icon=xbomber.png
+Exec=xbomber
+Terminal=0
+Type=Application
