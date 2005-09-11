@@ -10,6 +10,7 @@ Source0:	ftp://ftp.sonic.net/pub/users/nbs/unix/x/xbomber/%{name}.%{version}.tar
 Source1:	xbomber.desktop
 URL:		http://www.newbreedsoftware.com/xbomber/
 BuildRequires:	ImageMagick
+BuildRequires:	perl-base
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -33,7 +34,7 @@ p³ynnych ruchów.
 %prep
 %setup -q -n %{name}
 for i in bitmaps jungle levels pixmaps sounds; do
-	perl -pi -e "s,$i/,%{_datadir}/%{name}/$i/,g" *.c *.h
+	%{__perl} -pi -e "s,$i/,%{_datadir}/%{name}/$i/,g" *.c *.h
 done
 
 %build
@@ -44,13 +45,13 @@ done
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/Games/Strategy,%{_pixmapsdir},%{_datadir}/%{name}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir},%{_pixmapsdir},%{_datadir}/%{name}}
 
 install xbomber $RPM_BUILD_ROOT%{_bindir}
 cp -aR bitmaps pixmaps jungle levels sounds $RPM_BUILD_ROOT%{_datadir}/%{name}
 convert bitmaps/bomb.xbm $RPM_BUILD_ROOT%{_pixmapsdir}/xbomber.png
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/Strategy
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -60,4 +61,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
 %{_pixmapsdir}/*
-%{_applnkdir}/Games/Strategy/*
+%{_desktopdir}/*
