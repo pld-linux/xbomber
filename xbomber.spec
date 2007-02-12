@@ -1,5 +1,5 @@
 Summary:	A multi-player maze-style game
-Summary(pl):	Gra labiryntowa dla wielu graczy
+Summary(pl.UTF-8):   Gra labiryntowa dla wielu graczy
 Name:		xbomber
 Version:	0.8
 Release:	3
@@ -22,14 +22,14 @@ X-Bomber is vaguely based on "Atomic Bomberman" by InterPlay and
 "Bomberman" by Hudsonsof. It is played on a grid, rather than with
 smooth movement.
 
-%description -l pl
-X-Bomber to gra labiryntowa dla wielu graczy, w której gracze zbieraj±
-i zrzucaj± bomby, próbuj±c wysadziæ siê nawzajem. Ostatni pozosta³y
-przy ¿yciu gracz wygrywa.
+%description -l pl.UTF-8
+X-Bomber to gra labiryntowa dla wielu graczy, w ktÃ³rej gracze zbierajÄ…
+i zrzucajÄ… bomby, prÃ³bujÄ…c wysadziÄ‡ siÄ™ nawzajem. Ostatni pozostaÅ‚y
+przy Å¼yciu gracz wygrywa.
 
 X-Bomber niejako bazowany na grach "Atomic Bomberman" firmy InterPlay
-oraz "Bomberman" firmy Hudsonsof. Gra toczy siê na siatce, bez
-p³ynnych ruchów.
+oraz "Bomberman" firmy Hudsonsof. Gra toczy siÄ™ na siatce, bez
+pÅ‚ynnych ruchÃ³w.
 
 %prep
 %setup -q -n %{name}
