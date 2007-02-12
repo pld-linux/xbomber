@@ -1,5 +1,5 @@
 Summary:	A multi-player maze-style game
-Summary(pl.UTF-8):   Gra labiryntowa dla wielu graczy
+Summary(pl.UTF-8):	Gra labiryntowa dla wielu graczy
 Name:		xbomber
 Version:	0.8
 Release:	3
