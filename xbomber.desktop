@@ -1,10 +1,9 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=XBomber
 GenericName=Multi-player strategy game
 Comment=Multi-player strategy game
 Comment[pl]=Gra strategiczna dla kilku graczy
-Icon=xbomber.png
+Icon=xbomber
 Exec=xbomber
 Terminal=false
 Type=Application
